@@ -1,0 +1,50 @@
+<project name="project" default="all" basedir="." xmlns:if="ant:if" xmlns:sonar="antlib:org.sonar.ant">
+    <property file="project.properties" />
+
+    <path id="binaries">
+        <fileset dir="${lib}" if:set="lib">
+            <include name="*.jar" />
+        </fileset>
+        <pathelement location="${build}" />
+    </path>
+
+    <target name="clean" description="Removes all generated files">
+        <delete dir="${build}" />
+    </target>
+
+    <target name="prepare" depends="clean" description="Prepares the compilation">
+        <tstamp/>
+        <mkdir dir="${build}" />
+    </target>
+
+    <target name="build" description="Creates the Jar file" depends="prepare">
+        <javac includeantruntime="true"
+               source="${project.java.version}"
+               target="${project.java.version}"
+               encoding="${encoding}"
+               destdir="${build}"
+               debug="true">
+            <src path="${src}" />
+            <classpath refid="binaries" />
+        </javac>
+
+        <jar destfile="${jarname}.jar" basedir="${build}">
+            <manifest>
+                <attribute name="Built-By" value="${author}" />
+                <attribute name="Main-Class" value="${main.class}" />
+            </manifest>
+            <zipgroupfileset dir="${lib}" if:set="lib">
+                <include name="*.jar"/>
+            </zipgroupfileset>
+        </jar>
+    </target>
+
+    <target name="sonar" depends="clean,build" description="Source code analysis using SonarQube">
+        <taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
+            <classpath path="antlib/sonarant.jar" />
+        </taskdef>
+        <sonar:sonar />
+    </target>
+
+    <target name="all" description="Builds the whole project" depends="clean,build,sonar" />
+</project>
