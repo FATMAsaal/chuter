@@ -52,11 +52,3 @@ https://github.com/DexterInd/GrovePi/tree/master/Software/Python
 # chuter
 
 
-### Success story: one particularly successful use of the software 
-
-
-    + Since the confinement, the number of users of video conferencing tools has exploded, especially Jisti.
-    + This software can be used without creating an account, it also offers the possibility of exchanging professional documents and videos .
-    + So jitsi is starting to become popular and interesting, it was proposed during a meeting with the CNED(National Distance Learning Center) as a solution for distance learning (for videoconference calls) in national education.
-    + For the security side, Jitsi is recommended by both Edward Snowden and cybersecurity expert Bruce Schneier.
-    
