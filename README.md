@@ -52,4 +52,3 @@ https://github.com/DexterInd/GrovePi/tree/master/Software/Python
 # chuter
 
     
-https://www.zdne.fr/blogs/l-esprit-libre/logiciel-libre-a-l-education-nationale-une-question-une-non-reponse-et-des-elements-39910289.htm
