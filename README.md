@@ -51,4 +51,5 @@ https://github.com/DexterInd/GrovePi/tree/master/Software/Python
 <p>L'application, écrite à l'aide de Java et sa librairie Swing, récupére les données enregistrées par le Chutteur et les affiche sous forme de graphes. L'utilisateur peut choisir les données à afficher. Ainsi, il lui sera facile de comprendre l'ambiance de sa classe selon l'heure, le temps, la luminosité...
 # chuter
 
-
+    
+https://www.zdne.fr/blogs/l-esprit-libre/logiciel-libre-a-l-education-nationale-une-question-une-non-reponse-et-des-elements-39910289.htm
